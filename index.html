@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crystal Collector</title>
+
+  <!-- Link to jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Link to Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <!-- Link to Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Jumbotron for Title -->
+  <div class="jumbotron">
+    <h1 class="text-center">jQuery Crystal Collector</h1>
+    <h3 class="text-center">Combine Crystals to Unlock the Chamber!</h3>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="column playarea">
+
+        <div class="row comborow">
+
+          <div class="combo">Combination: 37</div>
+
+        </div>
+
+        <div class="row crystalsrow">
+
+          <button id="blue-crystal" class="btn crystal-btn" value="0"></button>
+          <button id="red-crystal" class="btn crystal-btn" value="0"></button>
+          <button id="green-crystal" class="btn crystal-btn" value="0"></button>
+          <button id="purple-crystal" class="btn crystal-btn" value="0"></button>
+
+        </div>
+      </div>
+      <div class="column chamber">
+        <p>Chamber</p>
+        <div id="skull-chamber"></div>
+      </div>
+    </div>
+    <div class="row solveentry">
+      <p>CrystalSolve: 27</p>
+    </div>
+  </div>
+
+  <!-- Link to JavaScript -->
+  <script src="./assets/javascript/game.js"></script>
+</body>
+
+</html>

@@ -15,6 +15,9 @@
   <!-- Link to Stylesheet -->
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
+  <!-- Link to Font -->
+  <link href='https://fonts.googleapis.com/css?family=Caesar Dressing' rel='stylesheet'>
+
 </head>
 
 <body>
@@ -28,11 +31,11 @@
   <div class="container">
     <div class="row">
 
-      <div class="column playarea">
+      <div class="col-7 playarea">
 
         <div class="row comborow">
 
-          <div class="combo">Combination: 37</div>
+          <div class="combo">Combine the Crystal Jewels:</div>
 
         </div>
 
@@ -45,14 +48,20 @@
 
         </div>
       </div>
-      <div class="column chamber">
-        <p>Chamber</p>
+      <div class="col-5 chamber">
+        <p class="chamberCombo">Chamber</p>
+
         <div id="skull-chamber"></div>
+
       </div>
     </div>
     <div class="row solveentry">
-      <p>CrystalSolve: 27</p>
+      <p class="col-7 crystal-sum">Crystal Sum: 0</p>
+      <p class="col-5 player-treasure">Total Treasure: 0</p>
     </div>
+
+    <button id="resetBtn">Keep Playing</button>
+
   </div>
 
   <!-- Link to JavaScript -->

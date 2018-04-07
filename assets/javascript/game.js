@@ -32,13 +32,15 @@ window.onload = function () {
         redCrystalValue = rollNewCrystal();
         greenCrystalValue = rollNewCrystal();
         purpleCrystalValue = rollNewCrystal();
-        console.log(crystalArray);
+        console.log("crystals: " +crystalArray);
         randomCombination = Math.floor(Math.random() * 120) + 19;
         treasure = Math.floor(Math.random() * 10000) + 1000;
+        console.log("treasure: " + treasure);
         $("#blue-crystal").attr("value", blueCrystalValue);
         $("#red-crystal").attr("value", redCrystalValue);
         $("#green-crystal").attr("value", greenCrystalValue);
         $("#purple-crystal").attr("value", purpleCrystalValue);
+        $("#skull-chamber").css("background-image", "url('./assets/images/map.jpg')");
         $("#skull-chamber").css("opacity", .1);
     }
 
@@ -63,6 +65,8 @@ window.onload = function () {
         $(".chamberCombo").text("Combination: " + randomCombination);
         $(".crystal-sum").text("Crystal Sum: " + crystalSum);
         $(".player-treasure").text("Total Treasure: $" + winnings);
+        $(".win-counter").text("Wins: " + wins);
+        $(".loss-counter").text("Losses: " + losses);
     }
 
     // Check win/loss
@@ -73,7 +77,9 @@ window.onload = function () {
             $("#skull-chamber").css("opacity", 1);
             audioWin.load();
             audioWin.play();
-            alert("You Won: $" + treasure + " Accumulated: $" + winnings);
+            // alert("You Won: $" + treasure + " Accumulated: $" + winnings);
+            $("#skull-chamber").css("background-image", "url('./assets/images/treasure.jpg')");
+            $("#skull-chamber").css("opacity", 1);
             gameOver = true;
         }
         else if (crystalSum > randomCombination) {
@@ -81,7 +87,9 @@ window.onload = function () {
             losses ++;
             audioLose.load();
             audioLose.play();
-            alert("You Lost: $" + treasure + " Accumulated: $" + winnings);
+            // alert("You Lost: $" + treasure + " Accumulated: $" + winnings);
+            $("#skull-chamber").css("background-image", "url('./assets/images/snakes.jpg')");
+            $("#skull-chamber").css("opacity", 1);
             gameOver = true;
         }
     }

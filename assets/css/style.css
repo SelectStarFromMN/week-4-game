@@ -1,6 +1,10 @@
 
 body {
     background: rgb(207, 226, 233);
+    /* background-size: cover; */
+    /* background-size: 100% 100%; */
+    /* background-image: url("../images/map.jpg"); */
+    /* background-size: cover;  */
     font-family: 'Caesar Dressing';font-size: 22px;
 }
 
@@ -48,9 +52,9 @@ body {
 
 #skull-chamber {
     background-size: cover;
-    width: 200px;
+    width: 250px;
     height: 200px;
-    background-image: url("../images/crystalskull.jpg");
+    background-image: url("../images/map.jpg");
     opacity: .1;
 }
 
